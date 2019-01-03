@@ -1,8 +1,8 @@
 class AzureCli < Formula
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://azurecliprod.blob.core.windows.net/releases/azure-cli-2.0.54.tar.gz"
-  sha256 "f7d6fc9703536769bcc1ae8b72dca1cdee3d2c5cdad21943f17fd43f904df9d9"
+  url "https://azureclistage.blob.core.windows.net/archive/2290041/rc2.0.54.tar.gz"
+  sha256 "bbb3f02fe6a68af217f1a201cc5b3d9da5dee0ba262dcbce4b8b51653eed7606"
   head "https://github.com/Azure/azure-cli.git"
 
   bottle do
@@ -306,8 +306,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-sql" do
-    url "https://files.pythonhosted.org/packages/9e/68/d7df2ec227c9082454981f4043f4994e0f1b8aa92beca0cf21c25cf1cfbe/azure-mgmt-sql-0.9.1.zip"
-    sha256 "5da488a56d5265757b45747cf5fd22413eb089e606658d6e6d84fe3e9b07e4fa"
+    url "https://files.pythonhosted.org/packages/ec/a0/4ecdb08ba6646d79766d86e87d22571a8045f490d417635dc1505b6633c7/azure-mgmt-sql-0.11.0.zip"
+    sha256 "a6b6d49fdbd440a1685dcd98bb92f98b6ecd450603733f8a3873ab2dc6c81607"
   end
 
   resource "azure-mgmt-storage" do
@@ -596,6 +596,7 @@ class AzureCli < Formula
     # Get the CLI components we'll install
     components = [
       buildpath/"src/azure-cli",
+      buildpath/"src/azure-cli-telemetry",
       buildpath/"src/azure-cli-core",
       buildpath/"src/azure-cli-nspkg",
       buildpath/"src/azure-cli-command_modules-nspkg",
